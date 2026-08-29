@@ -109,6 +109,14 @@ footer {
     }
     /* Main Content */
     main {
-        margin-top: 75px;
+        /* push main content down to accommodate larger header */
+        margin-top: 79px;
+    }
+}
+/* large devices (992px and up) */
+@media screen and (min-width: 992px) {
+    /* Header */
+    #menu a:hover {
+        border-bottom: 1px solid #3a3a3a;
     }
 }
