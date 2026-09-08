@@ -1,6 +1,0 @@
-{
-  "python.analysis.enabled": false,
-  "python.analysis.diagnosticMode": "off",
-  "python.linting.enabled": false,
-  "python.languageServer": "None"
-}
