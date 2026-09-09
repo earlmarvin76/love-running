@@ -1,11 +1,13 @@
- /* Google fonts import */
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
-/* Asterisk wild card selector to override default styles added by the browser */
+/* Google fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+/* Asterisk wildcard selector to override default styles added by the browser */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
 /* General styles */
 body {
     min-height: 100vh;
@@ -15,7 +17,10 @@ body {
     color: #3a3a3a;
     font-family: 'Lato', sans-serif;
 }
-h1, h2, h3 {
+
+h1,
+h2,
+h3 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -34,6 +39,7 @@ header {
     justify-content: space-between;
     align-items: baseline;
 }
+
 header a {
     text-decoration: none;
     color: inherit;
@@ -44,13 +50,16 @@ header a {
     letter-spacing: 4px;
     list-style-type: none;
 }
-#menu > li {
+
+#menu>li {
     margin-bottom: 1em;
 }
+
 .active {
     border-bottom: 1px solid #3a3a3a;
 }
-/* navbar styles with dropdown toggle */
+
+/* Navbar styles with dropdown toggle */
 nav {
     position: absolute;
     background-color: #ffffff;
@@ -59,35 +68,40 @@ nav {
     padding: 0 1rem;
     box-shadow: 0 2px 2px #3a3a3a;
     display: none;
-    top: 100%
+    top: 100%;
 }
 
 /* Nav toggle */
 #nav-toggle:checked~nav {
     display: block;
 }
+
 #nav-toggle {
     display: none;
 }
+
 .nav-toggle-label {
     font-size: 2rem;
 }
-/* Main Content */
-main {  
+
+/* Main content */
+main {
     /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
     margin-top: 47px;
-}   
-/* Hero Section */
+}
+
+/* Hero section */
 #hero {
     height: 600px;
     width: 100%;
     background: url("../images/hero-image.webp") no-repeat center center/cover;
     position: relative;
 }
+
 #cover-text {
-    /* Final rgba value set the opacity so it is semi-transparent */
-    background-color: rgba(241, 109, 107, 0.7);
+    /* Final rgba value sets the opacity so it is semi-transparent */
+    background-color: rgba(241, 109, 107, .7);
     font-size: 130%;
     position: absolute;
     bottom: 30px;
@@ -96,117 +110,56 @@ main {
     padding-top: 40px;
     padding-left: 10px;
 }
-#cover-text > h2, #cover-text > h3 {
-    color: #ffffff;
 
+#cover-text>h2,
+#cover-text>h3 {
+    color: #ffffff;
 }
+
+/* Reasons section */
 #reasons {
     width: 90%;
     margin: 20px auto;
-
 }
+
 #reasons h2 {
     margin-bottom: 20px;
-    text-align:center;
+    text-align: center;
     font-size: 280%;
 }
-#benefits-physical > div, #benefits-mental > div {
+
+#benefits-physical>div,
+#benefits-mental>div {
     line-height: 20px;
     margin-bottom: 20px;
 }
+
 #benefits p {
     padding: 0 20px;
 }
+
 #benefits hr {
     border-top: 1px solid #3a3a3a;
     margin: 5px 0;
 }
+
 #circle-cover-bg {
-    background: url('../images/reasons-image.webp') no-repeat top center/cover;
+    background: url('../images/reasons-image.webp') no-repeat top center / cover;
     height: 90vw;
     width: 90vw;
     margin-bottom: 20px;
-    /* Make the square image a circle */
+    /* Makes the square image into a circle */
     border-radius: 50%;
     max-width: 300px;
     max-height: 300px;
-
 }
+
 #benefits-image {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.page-heading {
-    padding: 2rem 1rem 1rem;
-    text-align: center;
-}
-.page-heading h2 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 2rem;
-    text-transform: uppercase;
-}
-.page-heading p {
-    margin-top: 0.5rem;
-}
-.gallery-grid {
-    display: grid;
-    gap: 1rem;
-    padding: 1rem;
-    max-width: 1100px;
-    margin: 0 auto 2rem;
-}
-.gallery-grid figure {
-    background-color: #ffffff;
-    box-shadow: 0 2px 5px rgb(58 58 58 / 25%);
-}
-.gallery-grid img {
-    display: block;
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-}
-.gallery-grid figcaption {
-    padding: 0.75rem;
-    font-weight: 700;
-}
-.signup-form {
-    display: grid;
-    gap: 0.5rem;
-    max-width: 560px;
-    margin: 0 auto 2rem;
-    padding: 1.5rem;
-    background-color: #ffffff;
-}
-.signup-form input:not([type="radio"]),
-.signup-form select {
-    width: 100%;
-    padding: 0.7rem;
-    border: 1px solid #3a3a3a;
-    font: inherit;
-}
-.signup-form fieldset {
-    display: grid;
-    gap: 0.5rem;
-    border: 0;
-    margin: 0.75rem 0;
-}
-.signup-form legend {
-    font-weight: 700;
-    margin-bottom: 0.25rem;
-}
-.signup-form button {
-    border: 0;
-    padding: 0.8rem;
-    background-color: #3a3a3a;
-    color: #ffffff;
-    font: inherit;
-    font-weight: 700;
-    cursor: pointer;
-}
-.signup-form button:hover {
-    background-color: #252525;
-}
+
 /* Footer */
 #social-networks {
     text-align: center;
@@ -215,13 +168,16 @@ main {
     justify-content: space-evenly;
     list-style-type: none;
 }
+
 #social-networks i {
     font-size: 160%;
     padding: 5%;
     color: #3a3a3a;
 }
+
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
+
     /* Header */
     nav {
         display: block;
@@ -230,38 +186,88 @@ main {
         width: fit-content;
         padding-right: 1rem;
     }
+
     #menu {
         display: flex;
     }
 
-    #menu > li {
+    #menu>li {
         padding-left: 1rem;
     }
+
     .nav-toggle-label {
         display: none;
     }
+
     #logo {
         font-size: 280%;
         line-height: 75px;
         margin: 0 0.5rem;
     }
-    /* Main Content */
+
+    /* Main content */
     main {
         /* Push main content down to accommodate larger header */
-        flex: 1 0 auto;
-        margin-top: 75px;
+        margin-top: 79px;
     }
+
     /* Hero */
     #cover-text {
         width: 300px;
         right: 50px;
-        
     }
+
+    /* Reasons section */
+    #benefits-physical,
+    #benefits-mental {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #benefits-physical>div,
+    #benefits-mental>div {
+        width: 75%;
+    }
+
+    #benefits-mental>div {
+        text-align: end;
+        align-self: flex-end;
+    }
+
 }
-/* large devices (992px and up) */
+
+/* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
-    /* Header */
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
+    }
+}
+
+@media screen and (min-width: 1200px) {    
+    /* Reasons section */
+    #benefits {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #benefits > div {
+        flex: 1;
+    }
+
+    #benefits-image {
+        order: 0
+    }
+
+    #benefits-mental {
+        order: 1;
+    }
+
+    #benefits-mental > div {
+        align-self: flex-start;
+    }
+
+    #benefits-physical > div {
+        align-self: flex-end;
     }
 }
