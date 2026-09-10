@@ -276,6 +276,11 @@ main {
     justify-content: center;
 }
 
+/* Hide meetup times on the home page */
+#meetups {
+    display: none;
+}
+
 /* Meetup Times section */
 #times {
     background: url('../images/dublin-city.webp') no-repeat center/cover;
@@ -305,11 +310,19 @@ main {
 /* Gallery page */
 #photos img {
     width: 100%;
+    display: block;
+    margin: 0;
+    margin-bottom: auto;
     line-height: 1em;
+    height: auto;
 }
 
 #photos {
     line-height: 0;
+    column-gap: 0;
+    margin: 0;
+    padding-bottom: 0;
+    border-bottom: 2px solid #3a3a3a;
 }
 
 /* Footer */
@@ -332,6 +345,7 @@ main {
     #photos {
         column-count: 2;
         column-gap: 0;
+        break-inside: avoid;
     }
 }
 
@@ -398,6 +412,7 @@ main {
     /* Gallery */
     #photos {
         column-count: 3;
+        break-inside: avoid;
     }
 }
 
@@ -410,6 +425,7 @@ main {
     /* Gallery */
     #photos {
         column-count: 4;
+        break-inside: avoid;
     }
 }
 
