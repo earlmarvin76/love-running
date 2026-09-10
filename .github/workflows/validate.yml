@@ -1,0 +1,26 @@
+name: Validate site
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check project files
+        run: |
+          echo "Project structure:"
+          find . -maxdepth 3 -type f | sort
+
+      - name: Start local server
+        run: |
+          python3 -m http.server 8000 &
+          sleep 2
+
+      - name: Confirm site responds
+        run: curl -I http://localhost:8000
